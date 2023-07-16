@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/98ca87f732.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="hoho.png" class="logo">
+                <ul id="sidemenu">
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#Services">Services</a></li>
+                    <li> <a href="#Portfolio">Portfolio</a></li>
+                    <li> <a href="#Contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p><span>Web</span> Developer</p>
+                <h1>Howdy! this is <span>Prabhat</span><br>I'am from Pokhara, Nepal</h1>
+            </div>
+        </div>
+
+    </div>
+    <!--------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pupu.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"><u>About Me</u></h1>
+                    <p>Hi! This is Sharma Prabhat from Pokhara, Nepal.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>HTML/CSS</span><br>Web Development/Web Design</li>
+                                <li><span>Graphics Design</span><br>All forms of Adobe</li>
+                                <li><span>JS</span><br>Node JS Developer</li>
+                            </ul>
+                        </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>School</span><br>Kumudini Homes</li>
+                            <li><span>High School</span><br>VS Niketan College(Science)</li>
+                            <li><span>College</span><br>ISMT(Bsc Computer Systems Engineering Bsc IT)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------Services------------------>
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="Services-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>Web Design</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-droplet"></i>
+                    <h2>Graphics Design</h2>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-js"></i>
+                    <h2>Java Script</h2>
+                </div>
+        </div>
+    </div>
+    <!----------Portfolio---------->
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="ps.jpg">
+                    <div class="layer">
+                        <h3>Websites</h3>
+                        <p> eCommerce website, Business website, Blog website, Portfolio website and many more...</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="sp.jpg">
+                    <div class="layer">
+                        <h3>Graphics Design</h3>
+                        <p>All the format of Adobe</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="rara.png">
+                    <div class="layer">
+                        <h3>JS</h3>
+                        <p> Web Applications, Building Web servers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------Contact-------->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="Contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>sharmaprabhat614@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>9840103794</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/prabaad07"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/prabad_5/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/prabhat-sharma-0469a41b5/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                </div>
+                
+                <div class="Contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn.btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><b>Copyright © Prabhat. Developed with HTML,CSS,JS</b> <i class="fa-solid fa-laptop-code"></i></p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+           for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+           }
+           for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+           }
+           event.currentTarget.classList.add("active-link");
+           document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJ2Bpgdkr1R9upgJj5GyDhZ0C9Jmf22InKnaAWKnNcGQAmViF_OlrRIr0ZsoynzOQA3Q/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response ={
+            msg.innerHTML="Success"
+            setTimeout(function(){
+                msginnerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
